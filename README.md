@@ -1,4 +1,3 @@
-
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Index
@@ -79,7 +78,7 @@ We are expecting:
 </details>
 
 ## Current Diagram
-![alt text](/Images/current_example.png "Current diagram")
+![alt text](/images/current_example.png "Current diagram")
 
 ## Questions
 
@@ -125,7 +124,7 @@ In the future we might incorporate federated auth that will allow us to fill out
 </details>
 
 # Proposed Architecture
-![alt text](/Images/proposed_example.png "Proposed diagram")
+![alt text](/images/proposed_example.png "Proposed diagram")
 
 ## Requirement
 Add the requirements to run the test
@@ -192,7 +191,7 @@ Latency
 Example of Best Practices
 * Enable multi-factor authentication (MFA) for privileged users
 
-![alt text](/Images/example_permissions.png "Permissions")
+![alt text](/images/example_permissions.png "Permissions")
 
 ## Disaster Recovery Plan
 
