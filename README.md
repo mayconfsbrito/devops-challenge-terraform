@@ -77,10 +77,10 @@ We are expecting:
 ```
 </details>
 
-## Current Diagram
+## Current Diagram (Shown as example)
 ![alt text](/images/current_example.png "Current diagram")
 
-## Questions
+## Questions (Shown as example)
 
 Ask Questions! Examples
 
@@ -123,10 +123,10 @@ In the future we might incorporate federated auth that will allow us to fill out
 ```
 </details>
 
-# Proposed Architecture
+# Proposed Architecture (Shown as example)
 ![alt text](/images/proposed_example.png "Proposed diagram")
 
-## Requirement
+## Requirement (Shown as example)
 Add the requirements to run the test
 
 Example
@@ -136,7 +136,7 @@ Example
 * AZ cli --> (curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash)
 * For Terratest --> Go v0.13
 
-### Constrains
+### Constrains (Shown as example)
 * Blob Storage for Terraform State
 * Due to GDPR compliance we will store our data resources under in eu-west region
 * Vm server should be RHEL due to application requirements
@@ -144,7 +144,7 @@ Example
 (#jenkins)## CICD Automation
 ![alt text](/Images/example_cicd.png "CICD Automation")
 
-## Terraform plan / Terratest
+## Terraform plan / Terratest (Shown as example)
 
 Add Output of Terraform PLan
 <details>
@@ -169,7 +169,7 @@ Plan: xx to add, 0 to change, 0 to destroy.
 ```
 </details>
 
-## Observability
+## Observability (Shown as example)
 What things will you consider?
 
 ```
@@ -187,44 +187,44 @@ Latency
 
 ## Permissions
 
-### Best Practices
+### Best Practices (Shown as example)
 Example of Best Practices
 * Enable multi-factor authentication (MFA) for privileged users
 
 ![alt text](/images/example_permissions.png "Permissions")
 
-## Disaster Recovery Plan
+## Disaster Recovery Plan (Shown as example)
 
 Example:
 
 * Database Backup
 
 
-## Compliance
+## Compliance (Shown as example)
 Example:
 * GDPR (data layer stored in EU-WEST)
 
-# Migration
+# Migration (Shown as example)
 ![alt text](https://cdn-images-1.medium.com/max/1600/0*WW36nabYAh5wn2v3. "Migration").
 
 What Migration Strategy would you choose?
 
-## App Migration Plan
+## App Migration Plan (Shown as example)
 Explain how would you do it
 
-## Database Migration Plan
+## Database Migration Plan (Shown as example)
 Explain how would you do it
 
-# CICD Application
+# CICD Application (Shown as example)
 
 Using a CI/CD we will automate the build and deploy processes. You can create multiple stages in the pipeline, each stage running based on the result of the previous one. 
 
-# Budget
+# Budget (Shown as example)
 
 Calculation Report
 
 
-# Next Steps
+# Next Steps (Shown as example)
 
 ## Anything that we need to consider in the future?
 
