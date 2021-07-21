@@ -1,12 +1,12 @@
---------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Index
+
 * [Current Architecture](#current-architecture)
 * [Current Diagram](#current-diagram)
 * [Questions](#current-questions)
 * [Proposed Architecture](#proposed-architecture)
 * [CICD - Architecture](#jenkins)
-* [Terratest](#terratest)
+* [Terratest](#terraform-plan-terratest-shown-as-example)
 * [Observability](#observability)
 * [Permissions](#permissions)
 * [Migration](#migration)
@@ -14,8 +14,6 @@
 * [Next Steps](#next-steps)
 * [CICD - Application](#cicd-application)
 
-
---------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Current Architecture.
 <details>
@@ -43,9 +41,8 @@ data that will help to calculate his/her credit rating.
 
 ## The Goal
 As a company-wide initiative, we’ve been asked to
-1. Migrate all our systems to Azure cloud
-2. The company is shifting to event-driven architecture with
-microservices
+1. Migrate all our systems to a cloud provider (You may plan for AWS, Google Cloud or Azure)
+2. The company is shifting to event-driven architecture with microservices
 
 ## The Test
 This test will mix some designs (text and diagrams are expected) and
@@ -55,24 +52,24 @@ want to test some relevant points we’ll explicitly point out.
 new architecture including text, diagrams, and any other useful
 resource. Give special attention how to handle exceptions if the job
 stops for any reason. How do we recover? How will the deployment
-process will be? Also, think about permissions, how are we going the
-Azure resources permissions?
+process will be? Also, think about permissions, how are we giving the
+cloud resources permissions?
 2. How are you going to handle the migration of data? Design a
 strategy (maybe using cloud resources o anything else?) and tell us
 about it.
 3. Let’s assume the current DB is a traditional Oracle relational DB.
 Write all the necessary scripts to migrate this data to a new DB in
-Azure. There are several options. Please explain which one you
+the cloud. There are several options. Please explain which one you
 choose and why.
-4. Given the new architecture in Azure you designed let’s assume we’ll
-provision new resources through Terraform. Build some of the infra
-(let’s discuss which parts will be more relevant) with Terraform and
-deploy it.
+4. Given the new architecture you designed let’s assume we’ll provision
+new resources through Terraform. Build some of the most important
+infrastructure with Terraform and build the plan for it.
 5. What kind of monitoring would be relevant to add? What kind of
 resources would be helpful to achieve this?
+
 We are expecting:
-1. A detailed explained for each step
-2. The reasons to choose each resource in Azure.
+1. A detailed explanation for each step
+2. The reasons to choose each resource in the cloud.
 3. Details on how those resources work. 
 ```
 </details>
@@ -80,9 +77,7 @@ We are expecting:
 ## Current Diagram (Shown as example)
 ![alt text](/images/current_example.png "Current diagram")
 
-## Questions (Shown as example)
-
-Ask Questions! Examples
+## FAQ (Shown as example)
 
 <details>
 <summary>User / Permissions Migration</summary>
@@ -90,8 +85,10 @@ Ask Questions! Examples
 ```
 Are the users using auth/authentication federated service? SSO auth?
 
-User’s apply through filling out forms without the necessity of creating an account with the bank (it is open to anyone) so there should be no auth involved.
-In the future we might incorporate federated auth that will allow us to fill out some information that we currently request to users. So any prep work for the future would be great.
+User’s apply through filling out forms without the necessity of creating an account with the bank (it is open to anyone)
+so there should be no auth involved.
+In the future we might incorporate federated auth that will allow us to fill out some information that we currently
+request to users. So any prep work for the future would be great.
 ```
 </details>
 <details>
@@ -146,7 +143,7 @@ Example
 
 ## Terraform plan / Terratest (Shown as example)
 
-Add Output of Terraform PLan
+Add Output of Terraform Plan
 <details>
 <summary>Summary</summary>
   
