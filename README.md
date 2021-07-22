@@ -3,10 +3,9 @@
 
 * [Current Architecture](#current-architecture)
 * [Current Diagram](#current-diagram)
-* [Questions](#current-questions)
 * [Proposed Architecture](#proposed-architecture)
-* [CICD - Architecture](#jenkins)
-* [Terratest](#terraform-plan-terratest-shown-as-example)
+* [CICD - Automation](#cicd-automation)
+* [Terraform Plan](#terraform-plan-terratest)
 * [Observability](#observability)
 * [Permissions](#permissions)
 * [Migration](#migration)
@@ -15,7 +14,7 @@
 * [CICD - Application](#cicd-application)
 
 
-## Current Architecture.
+## Current Architecture
 <details>
 <summary>Test Details</summary>
 
@@ -74,10 +73,10 @@ We are expecting:
 ```
 </details>
 
-## Current Diagram (Shown as example)
+## Current Diagram
 ![alt text](/images/current_example.png "Current diagram")
 
-## FAQ (Shown as example)
+## FAQ
 
 <details>
 <summary>User / Permissions Migration</summary>
@@ -91,39 +90,15 @@ In the future we might incorporate federated auth that will allow us to fill out
 request to users. So any prep work for the future would be great.
 ```
 </details>
-<details>
-<summary>Data Migration</summary>
-  
-```
 
-```
-</details>
-<details>
-<summary>Interface System Constraints</summary>
-  
-```
 
-```
-</details>
-<details>
-<summary>Budget</summary>
-  
-```
+## Proposed Architecture
 
-```
-</details>
-<details>
-<summary>Application design</summary>
-  
-```
+(Shown as example)
 
-```
-</details>
-
-# Proposed Architecture (Shown as example)
 ![alt text](/images/proposed_example.png "Proposed diagram")
 
-## Requirement (Shown as example)
+## Requirements
 Add the requirements to run the test
 
 Example
@@ -133,15 +108,20 @@ Example
 * AZ cli --> (curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash)
 * For Terratest --> Go v0.13
 
-### Constrains (Shown as example)
+## Constrains
+
+Example:
+
 * Blob Storage for Terraform State
 * Due to GDPR compliance we will store our data resources under in eu-west region
 * Vm server should be RHEL due to application requirements
 
-(#jenkins)## CICD Automation
+## CICD Automation
 ![alt text](/Images/example_cicd.png "CICD Automation")
 
-## Terraform plan / Terratest (Shown as example)
+## Terraform plan / Terratest
+
+(Shown as example)
 
 Add Output of Terraform Plan
 <details>
@@ -166,7 +146,7 @@ Plan: xx to add, 0 to change, 0 to destroy.
 ```
 </details>
 
-## Observability (Shown as example)
+## Observability
 What things will you consider?
 
 ```
@@ -184,45 +164,47 @@ Latency
 
 ## Permissions
 
-### Best Practices (Shown as example)
+## Best Practices
 Example of Best Practices
 * Enable multi-factor authentication (MFA) for privileged users
 
 ![alt text](/images/example_permissions.png "Permissions")
 
-## Disaster Recovery Plan (Shown as example)
+## Disaster Recovery Plan
 
 Example:
 
 * Database Backup
 
 
-## Compliance (Shown as example)
+## Compliance
 Example:
 * GDPR (data layer stored in EU-WEST)
 
-# Migration (Shown as example)
+## Migration
+(Shown as example)
+
 ![alt text](https://cdn-images-1.medium.com/max/1600/0*WW36nabYAh5wn2v3. "Migration").
 
 What Migration Strategy would you choose?
 
-## App Migration Plan (Shown as example)
+## App Migration Plan
 Explain how would you do it
 
-## Database Migration Plan (Shown as example)
+## Database Migration Plan
 Explain how would you do it
 
-# CICD Application (Shown as example)
+## CICD Application
 
+Example:
 Using a CI/CD we will automate the build and deploy processes. You can create multiple stages in the pipeline, each stage running based on the result of the previous one. 
 
-# Budget (Shown as example)
+## Budget
 
 Calculation Report
 
 
-# Next Steps (Shown as example)
+# Next Steps
 
 ## Anything that we need to consider in the future?
 
-* Query data when generating the report
