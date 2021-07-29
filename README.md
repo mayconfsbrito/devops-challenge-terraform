@@ -24,6 +24,8 @@ This challenge poses to test your experience on DevOps and the usual technologie
 
 Read the case specified in the Current Architecture section, and perform the steps described.  We will consider favorably all bonus points you complete.
 
+We have added some example modules to begin the migration into Azure. You may use them or delete them.
+
 
 ## Current Architecture
 <details>
