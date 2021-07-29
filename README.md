@@ -1,58 +1,70 @@
+# DevOps Challenge
 
 ## Index
 
+* [Instructions](#instructions)
 * [Current Architecture](#current-architecture)
 * [Current Diagram](#current-diagram)
 * [Proposed Architecture](#proposed-architecture)
-* [CICD - Automation](#cicd-automation)
 * [Terraform Plan](#terraform-plan-terratest)
-* [Observability](#observability)
-* [Permissions](#permissions)
+* [CICD - Automation (Bonus)](#cicd-automation-bonus)
+* [Observability (Bonus)](#observability-bonus)
+* [Permissions (Bonus)](#permissions-bonus)
+* [Best Practices (Bonus)](#best-practices-bonus)
+* [Disaster Recovery Plan (Bonus)](#disaster-recovery-plan-bonus)
+* [Compliance (Bonus)](#compliance-bonus)
 * [Migration](#migration)
-* [Budget](#budget)
+* [Budget (Bonus)](#budget-bonus)
 * [Next Steps](#next-steps)
 * [CICD - Application](#cicd-application)
+
+## Instructions
+
+This challenge poses to test your experience on DevOps and the usual technologies applied.The most important thing for us is that you show your expertise and best practices.
+
+Read the case specified in the Current Architecture section, and perform the steps described.  We will consider favorably all bonus points you complete.
 
 
 ## Current Architecture
 <details>
 <summary>Test Details</summary>
 
-```
+---
+
 Let’s imagine that a Bank has a monolithic architecture to handle the enrollment for new credit cards.
 A potential customer will enter a bunch of data through some online forms.
 Once a day there will be a batch processing job that will process all this
-data (The job will trigger a monolithic application that extracts the day’s
-data and run the following tasks) The job will trigger a monolith service).
+data. The job will trigger a monolithic application that extracts the day’s
+data and run the following tasks.
 
 • It will verify if it’s an existing customer and if it is, it will verify any
 potential loans or red flags in case the customer is not eligible for a
 new credit card.
+
 • It will verify the customer’s identity. We reach an external API (e.g.
 Equifax) to verify all the provided details are accurate and also verify
 if there is any red flag.
+
 • It will calculate the amount limit assigned for the credit card. It will
 also auto-generate a new Credit Card number so the customer can
 start using it right away until the actual credit card is received.
+
 All the data is currently persisted on an on-premise Oracle DB. This DB
 holds all the personal data the user inputs in the forms and also additional
 data that will help to calculate his/her credit rating.
 
-## The Goal
+#### The Goal
 As a company-wide initiative, we’ve been asked to
 1. Migrate all our systems to a cloud provider (You may plan for AWS, Google Cloud or Azure)
 2. The company is shifting to event-driven architecture with microservices
 
-## The Test
+#### The Test
 This test will mix some designs (text and diagrams are expected) and
 some coding. We are absolutely not aiming to build this system. We just
 want to test some relevant points we’ll explicitly point out.
 1. Given the 2 goals we mentioned in the previous section, imagine a
 new architecture including text, diagrams, and any other useful
-resource. Give special attention how to handle exceptions if the job
-stops for any reason. How do we recover? How will the deployment
-process will be? Also, think about permissions, how are we giving the
-cloud resources permissions?
+resource.
 2. How are you going to handle the migration of data? Design a
 strategy (maybe using cloud resources o anything else?) and tell us
 about it.
@@ -63,14 +75,18 @@ choose and why.
 4. Given the new architecture you designed let’s assume we’ll provision
 new resources through Terraform. Build some of the most important
 infrastructure with Terraform and build the plan for it.
-5. What kind of monitoring would be relevant to add? What kind of
+5. (Bonus) What kind of monitoring would be relevant to add? What kind of
 resources would be helpful to achieve this?
+6. (Bonus) Give special attention how to handle exceptions if the job
+stops for any reason. How do we recover? How will the deployment
+process will be? Also, think about permissions, how are we giving the
+cloud resources permissions?
 
 We are expecting:
 1. A detailed explanation for each step
 2. The reasons to choose each resource in the cloud.
 3. Details on how those resources work. 
-```
+---
 </details>
 
 ## Current Diagram
@@ -116,9 +132,6 @@ Example:
 * Due to GDPR compliance we will store our data resources under in eu-west region
 * Vm server should be RHEL due to application requirements
 
-## CICD Automation
-![alt text](/Images/example_cicd.png "CICD Automation")
-
 ## Terraform plan / Terratest
 
 (Shown as example)
@@ -146,7 +159,7 @@ Plan: xx to add, 0 to change, 0 to destroy.
 ```
 </details>
 
-## Observability
+## Observability (Bonus)
 What things will you consider?
 
 ```
@@ -162,22 +175,25 @@ Latency
 
 </details>
 
-## Permissions
+## CICD Automation (Bonus)
+![alt text](/Images/example_cicd.png "CICD Automation")
 
-## Best Practices
+## Permissions (Bonus)
+
+## Best Practices (Bonus)
 Example of Best Practices
 * Enable multi-factor authentication (MFA) for privileged users
 
 ![alt text](/images/example_permissions.png "Permissions")
 
-## Disaster Recovery Plan
+## Disaster Recovery Plan (Bonus)
 
 Example:
 
 * Database Backup
 
 
-## Compliance
+## Compliance (Bonus)
 Example:
 * GDPR (data layer stored in EU-WEST)
 
@@ -194,12 +210,12 @@ Explain how would you do it
 ## Database Migration Plan
 Explain how would you do it
 
-## CICD Application
+## CICD Application (Bonus)
 
 Example:
 Using a CI/CD we will automate the build and deploy processes. You can create multiple stages in the pipeline, each stage running based on the result of the previous one. 
 
-## Budget
+## Budget (Bonus)
 
 Calculation Report
 
