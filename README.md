@@ -16,7 +16,6 @@
 * [Migration](#migration)
 * [Budget (Bonus)](#budget-bonus)
 * [Next Steps](#next-steps)
-* [CICD - Application](#cicd-application)
 
 ## Instructions
 
@@ -178,15 +177,20 @@ Latency
 </details>
 
 ## CICD Automation (Bonus)
-![alt text](/Images/example_cicd.png "CICD Automation")
+
+Example:
+Using a CI/CD we will automate the build and deploy processes. You can create multiple stages in the pipeline, each stage running based on the result of the previous one. 
 
 ## Permissions (Bonus)
+
+Example:
+
+![alt text](/images/example_permissions.png "Permissions")
 
 ## Best Practices (Bonus)
 Example of Best Practices
 * Enable multi-factor authentication (MFA) for privileged users
 
-![alt text](/images/example_permissions.png "Permissions")
 
 ## Disaster Recovery Plan (Bonus)
 
@@ -211,11 +215,6 @@ Explain how would you do it
 
 ## Database Migration Plan
 Explain how would you do it
-
-## CICD Application (Bonus)
-
-Example:
-Using a CI/CD we will automate the build and deploy processes. You can create multiple stages in the pipeline, each stage running based on the result of the previous one. 
 
 ## Budget (Bonus)
 
