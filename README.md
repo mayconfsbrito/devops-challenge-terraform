@@ -21,14 +21,14 @@
 
 This challenge poses to test your experience on DevOps and the usual technologies applied.The most important thing for us is that you show your expertise and best practices.
 
-Read the case specified in the Current Architecture section, and perform the steps described.  We will consider favorably all bonus points you complete.
+Read the case specified in the Current Architecture section, and perform the steps described. We expect to see Terraform code to provision at least part of your proposed Architecture. We will consider favorably all bonus points you complete.
 
 We have added some example modules to begin the migration into Azure. You may use them or delete them.
 
 
 ## Current Architecture
 <details>
-<summary>Test Details</summary>
+<summary><b>Test Details</b></summary>
 
 ---
 
@@ -58,8 +58,13 @@ data that will help to calculate his/her credit rating.
 As a company-wide initiative, we’ve been asked to
 1. Migrate all our systems to a cloud provider (You may plan for AWS, Google Cloud or Azure)
 2. The company is shifting to event-driven architecture with microservices
+</details>
+
+<details>
+<summary><b>Tasks</b></summary>
 
 #### The Test
+
 This test will mix some designs (text and diagrams are expected) and
 some coding. We are absolutely not aiming to build this system. We just
 want to test some relevant points we’ll explicitly point out.
