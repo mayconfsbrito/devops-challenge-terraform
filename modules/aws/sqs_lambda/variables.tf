@@ -1,7 +1,7 @@
-variable "enqueue_name" {
-  description = "Name of the first SQS queue (enqueue)"
+variable "queue_name" {
+  description = "Name of the SQS queue"
   type        = string
-  default     = "first queue"
+  default     = "main_queue"
 }
 
 variable "environment" {
