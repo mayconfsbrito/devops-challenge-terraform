@@ -17,3 +17,18 @@ module "sqs-with-dlq" {
     Environment = var.environment
   }
 }
+
+module "lambda_function" {
+  source = "terraform-aws-modules/lambda/aws"
+
+  function_name = var.first_function_name
+  description   = var.first_function_description
+  handler       = "index.lambda_handler"
+  runtime       = "python3.8"
+
+  source_path = var.first_function_source_path
+
+  tags = {
+    Name = var.environment
+  }
+}
