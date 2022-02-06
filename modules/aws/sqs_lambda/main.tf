@@ -140,3 +140,23 @@ module "dequeue_lambda_function" {
     Name = var.environment
   }
 }
+
+resource "aws_apigatewayv2_api" "main_apigateway" {
+  name          = "main_http_api"
+  protocol_type = "HTTP"
+}
+
+resource "aws_apigatewayv2_integration" "main_apigateway_integration" {
+  api_id           = aws_apigatewayv2_api.main_apigateway.id
+  integration_type = "HTTP_PROXY"
+
+  integration_method = "ANY"
+  integration_uri    = "https://example.com/{proxy}"
+}
+
+resource "aws_apigatewayv2_route" "main_apigateway_route" {
+  api_id    = aws_apigatewayv2_api.main_apigateway.id
+  route_key = "ANY /{proxy+}"
+
+  target = "integrations/${aws_apigatewayv2_integration.main_apigateway_integration.id}"
+}
