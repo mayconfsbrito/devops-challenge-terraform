@@ -3,6 +3,9 @@ terraform {
   required_version = ">= 0.15"
 }
 
+/*
+* IAM Resources
+*/
 resource "aws_iam_role" "run_sqs_enqueue" {
   name = "${var.first_function_name}-iam-role"
 
@@ -82,6 +85,10 @@ resource "aws_iam_role" "run_sqs_dequeue" {
   }
 }
 
+
+/*
+* SQS Resources
+*/
 module "sqs-with-dlq" {
   source  = "damacus/sqs-with-dlq/aws"
   version = "1.0.0"
@@ -97,6 +104,9 @@ module "sqs-with-dlq" {
   }
 }
 
+/*
+* Lambda Resources
+*/
 module "enqueue_lambda_function" {
   source = "terraform-aws-modules/lambda/aws"
 
