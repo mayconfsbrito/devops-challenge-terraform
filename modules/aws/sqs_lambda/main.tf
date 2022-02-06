@@ -3,11 +3,14 @@ terraform {
   required_version = ">= 0.15"
 }
 
-module "first_queue" {
-  source  = "terraform-aws-modules/sqs/aws"
-  version = "~> 2.0"
+module "sqs-with-dlq" {
+  source  = "damacus/sqs-with-dlq/aws"
+  version = "1.0.0"
 
-  name = var.queue_name
+  name                        = var.queue_name
+  visibility_timeout_seconds  = 43200
+  alarm_sns_topic_arn         = false
+  content_based_deduplication = false
 
   tags = {
     Service     = var.queue_name
