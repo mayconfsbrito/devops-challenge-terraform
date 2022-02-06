@@ -1,1 +1,0 @@
-{"filename": "builds/67acf36e7b4371735dba955aaf7078f40c72732db56d70d39b6713d59dc29f5c.zip", "runtime": "python3.8", "artifacts_dir": "builds", "build_plan": [["zip", "./src/first_function", null]]}
