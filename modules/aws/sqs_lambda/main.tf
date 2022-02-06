@@ -40,10 +40,6 @@ resource "aws_iam_role" "run_sqs_enqueue" {
       ]
     })
   }
-
-  tags = {
-    Environment = var.environment
-  }
 }
 
 resource "aws_iam_role" "run_sqs_dequeue" {
@@ -78,10 +74,6 @@ resource "aws_iam_role" "run_sqs_dequeue" {
         }
       ]
     })
-  }
-
-  tags = {
-    Environment = var.environment
   }
 }
 

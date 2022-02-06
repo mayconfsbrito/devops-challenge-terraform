@@ -1,5 +1,5 @@
 
-module "aws_lambda" {
+module "sqs_lambda" {
   source      = "../../modules/aws/sqs_lambda"
   environment = "dev"
 
