@@ -939,8 +939,32 @@ What things will you consider?
 
 ## CICD Automation (Bonus)
 
-Example:
-Using a CI/CD we will automate the build and deploy processes. You can create multiple stages in the pipeline, each stage running based on the result of the previous one. 
+This is the pipeline suggested by me for the main branch to deploy the application to the production environment. This pipeline should be triggered from a merge request from another branch. 
+
+Numbered list = stages
+
+Bullets = Jobs from the respective stage
+
+1. **Pre**
+    - Cache
+    - Eslint
+    - Prettier
+2. **Build**
+    - Build (container or the executable)
+3. **Test**
+    - Unit tests from the application
+    - DAST
+    - SAST
+    - Container scanning
+    - Dependencies scanning
+    - (...) other tests suggested by the dev team
+4. **Staging**
+    - Deploy
+5. **Production**
+    - Deploy
+
+For other branches I suggest a different workflow deploying to the Dev environment.
+
 
 ## Permissions (Bonus)
 
