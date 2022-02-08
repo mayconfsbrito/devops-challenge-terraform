@@ -982,10 +982,13 @@ Example:
 
 ## Disaster Recovery Plan (Bonus)
 
-Example:
-
-* Database Backup
-
+- Define a Disaster Recovery Strategy
+- Define a Recovery Time Objective (RTO)
+- Define a Recovery Point Objective (RPO)
+- Simulate a disaster recovery situation using a different environment or region to train and know the current context, limitations and what needs to be improved
+- Create routines to backup the database automatically in a short interval of time
+- Use an IAC (Infra as code) tool (like Terraform or Ansible) to build and manage your infra. In this case, the recovery will be brutally faster than a no IAC situation.
+- If it's possible, deploy your services (serverless or nodes) in different Zones (Multi-AZ), or even Multi-Region
 
 ## Compliance (Bonus)
 Example:
