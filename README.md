@@ -920,16 +920,18 @@ Plan: 26 to add, 0 to change, 0 to destroy.
 ## Observability (Bonus)
 What things will you consider?
 
-```
-Example: Latency
-
-```
 <details>
 <summary>Summary</summary>
-  
-Latency
-* What: How long something takes to respond or complete
-* Why: Direct impact on customer experience
+
+1. **Availability**
+    * What: Check if the lambda services or the database are available
+    * Why: Useful for fast detection and resolution of the problem 
+2. **Error Rates**
+    * What: Check any 5xx or 4xx HTTP status response from the services
+    * Why: Important to detect security or code anomalies from the services
+3. **Traffic**
+    * What: Track the number of requests for each service
+    * Why: Useful to detect high workload, security attacks (like DDOS), or even to measure the right resources for the architecture
 
 </details>
 
