@@ -994,19 +994,23 @@ Example:
 
 What Migration Strategy would you choose?
 
-**Database (Lift and Shift)**
-For the architecture proposed in this exercise, I suggested migrating the on-premise Oracle database to a new RDS instance, keeping the same DBMS and data structure. This is a strategy allows a fast migration to the cloud causing and has a minor impact on this process. Although, if the architect or the dev team chooses to change completely the database, we have a large number of options like DynamoDB, MySQL, Postgres and etc. offered by RDS or any other service in the cloud.
+For the database, we can use Lift and Shift and for application, we should rebuild a new application using a completely new architecture to run in a serverless environment (like AWS Lambda or Azure Functions).
 
-
-**Services Migration (Rebuild)**
-Since we are moving from a batch processing job to a new event-driven serverless architecture I suggest building one or two completely new applications, even using a different language from the current service. We could leverage the same database (now running in the cloud) making the process easier and quicker.
-
+If we choose to use a different DBMS or data structure I would suggest rebuilding a new database using a cloud provider, but this decision depends so much on the type and business rules.
 
 ## App Migration Plan
-Explain how would you do it
+
+Since we are moving from a batch processing job to a new event-driven serverless architecture I suggest building one or two completely new applications, even using a different language from the current service. We could leverage the same database (now running in the cloud) making the process easier and quicker.
+
+**Steps:**
+1. Build, test and validate the serveless architecture
+2. Deploy a load-balancer to apply Canary Release feature, where we'll move requests from the online form between legacy, and new application gradually to check the success of the new application in production
+3. When we hit 100% of accuracy for the new service we can point all requests from the online form to the new application and shutdown the legacy application and database
+
 
 ## Database Migration Plan
-Explain how would you do it
+
+For the architecture proposed in this exercise, I suggested migrating the on-premise Oracle database to a new RDS instance, keeping the same DBMS and data structure. This is a strategy allows a fast migration to the cloud causing and has a minor impact on this process. Although, if the architect or the dev team chooses to change completely the database, we have a large number of options like DynamoDB, MySQL, Postgres and etc. offered by RDS or any other service in the cloud.
 
 ## Budget (Bonus)
 
