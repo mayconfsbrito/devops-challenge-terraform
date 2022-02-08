@@ -116,8 +116,6 @@ request to users. So any prep work for the future would be great.
 
 ## Proposed Architecture
 
-(Shown as example)
-
 ![alt text](/images/proposed_example.png "Proposed diagram")
 
 ## Requirements
@@ -135,15 +133,16 @@ request to users. So any prep work for the future would be great.
 
 ## Constrains
 
-Example:
+- Database allocated storage
+- Oracle database license mode (bring your own license) and version
+- RDS instance database class (db.t3.large)
+- Resources will be deployed in us-west-1 region
+- Lambda function codes are just a hello world example
+- Were Endpoints/services for each task were not created
 
-* Blob Storage for Terraform State
-* Due to GDPR compliance we will store our data resources under in eu-west region
-* Vm server should be RHEL due to application requirements
+
 
 ## Terraform plan / Terratest
-
-(Shown as example)
 
 Add Output of Terraform Plan
 <details>
@@ -966,7 +965,6 @@ Example:
 * GDPR (data layer stored in EU-WEST)
 
 ## Migration
-(Shown as example)
 
 ![alt text](https://cdn-images-1.medium.com/max/1600/0*WW36nabYAh5wn2v3. "Migration").
 
