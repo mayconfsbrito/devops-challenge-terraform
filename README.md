@@ -121,14 +121,17 @@ request to users. So any prep work for the future would be great.
 ![alt text](/images/proposed_example.png "Proposed diagram")
 
 ## Requirements
-Add the requirements to run the test
 
-Example
-* Azure with a Visual Studio Subscription
-* Jenkins
-* Terraform => v0.12
-* AZ cli --> (curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash)
-* For Terratest --> Go v0.13
+1. Terraform v1.1.5
+2. AWS Account - With admin permissions to create resources for these services:
+    * IAM
+    * Lambda
+    * SQS
+    * RDS
+    * EC2 (VPC)
+3. Aws cli v2.1.3 
+    * Default profile configured with the AWS account above
+
 
 ## Constrains
 
