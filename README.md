@@ -994,6 +994,14 @@ Example:
 
 What Migration Strategy would you choose?
 
+**Database (Lift and Shift)**
+For the architecture proposed in this exercise, I suggested migrating the on-premise Oracle database to a new RDS instance, keeping the same DBMS and data structure. This is a strategy allows a fast migration to the cloud causing and has a minor impact on this process. Although, if the architect or the dev team chooses to change completely the database, we have a large number of options like DynamoDB, MySQL, Postgres and etc. offered by RDS or any other service in the cloud.
+
+
+**Services Migration (Rebuild)**
+Since we are moving from a batch processing job to a new event-driven serverless architecture I suggest building one or two completely new applications, even using a different language from the current service. We could leverage the same database (now running in the cloud) making the process easier and quicker.
+
+
 ## App Migration Plan
 Explain how would you do it
 
