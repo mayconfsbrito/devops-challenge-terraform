@@ -140,8 +140,6 @@ request to users. So any prep work for the future would be great.
 - Lambda function codes are just a hello world example
 - Were Endpoints/services for each task were not created
 
-
-
 ## Terraform plan / Terratest
 
 Add Output of Terraform Plan
@@ -977,8 +975,10 @@ Example:
 - Enable multi-factor authentication (MFA) for all users 
 - Use just private subnets to run the database on the cloud
 - Define the least viable policy actions to lambda functions
-- Run as much job tests on the Test stage of the CI pipeline as possible (like vulnerability scanning, DAST, SAST, unit tests and others)
+- Run as many job tests on the Test stage of the CI pipeline as possible (like vulnerability scanning, DAST, SAST, unit tests and others)
 - Check the saturation, latency and usage of the application using observability tools to balance the right resources to this architecture
+- Use SSO to authenticate to other services
+- Integrate AzureAD with AWS IAM linking real users from AD to IAM Roles to manage AWS resources and services
 
 ## Disaster Recovery Plan (Bonus)
 
