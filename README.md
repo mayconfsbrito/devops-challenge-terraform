@@ -140,8 +140,6 @@ request to users. So any prep work for the future would be great.
 - Lambda function codes are just a hello world example
 - Were Endpoints/services for each task were not created
 
-
-
 ## Terraform plan / Terratest
 
 Add Output of Terraform Plan
@@ -973,16 +971,24 @@ Example:
 ![alt text](/images/example_permissions.png "Permissions")
 
 ## Best Practices (Bonus)
-Example of Best Practices
-* Enable multi-factor authentication (MFA) for privileged users
 
+- Enable multi-factor authentication (MFA) for all users 
+- Use just private subnets to run the database on the cloud
+- Define the least viable policy actions to lambda functions
+- Run as many job tests on the Test stage of the CI pipeline as possible (like vulnerability scanning, DAST, SAST, unit tests and others)
+- Check the saturation, latency and usage of the application using observability tools to balance the right resources to this architecture
+- Use SSO to authenticate to other services
+- Integrate AzureAD with AWS IAM linking real users from AD to IAM Roles to manage AWS resources and services
 
 ## Disaster Recovery Plan (Bonus)
 
-Example:
-
-* Database Backup
-
+- Define a Disaster Recovery Strategy
+- Define a Recovery Time Objective (RTO)
+- Define a Recovery Point Objective (RPO)
+- Simulate a disaster recovery situation using a different environment or region to train and know the current context, limitations and what needs to be improved
+- Create routines to backup the database automatically in a short interval of time
+- Use an IAC (Infra as code) tool (like Terraform or Ansible) to build and manage your infra. In this case, the recovery will be brutally faster than a no IAC situation.
+- If it's possible, deploy your services (serverless or nodes) in different Zones (Multi-AZ), or even Multi-Region
 
 ## Compliance (Bonus)
 Example:
